@@ -1,0 +1,14 @@
+version:
+services:
+  web:
+    build:
+      context:
+      dockerfile: dockerfile
+    image: Stock_Market_Project_image_flask
+    container_name: stock_market_project
+    ports:
+      - "5005:5000"
+    volumes:
+      - :/app
+    environment:
+      - FLASK_DEBUG: "1"
